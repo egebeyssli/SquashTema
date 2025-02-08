@@ -23,8 +23,9 @@
             background-color: #007bff;  /* Canlı mavi */
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 20px 0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         header h1 {
@@ -58,14 +59,14 @@
             transform: scale(1.05);
         }
 
-        /* Sağdaki Butonlar */
+        /* Header'deki Butonlar */
         .auth-buttons {
             position: absolute;
             right: 30px;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
-            flex-direction: column;
+            gap: 15px;
         }
 
         .auth-buttons a {
@@ -74,8 +75,8 @@
             padding: 10px 20px;
             border-radius: 25px;
             text-decoration: none;
-            margin-bottom: 15px;
-            text-align: center;
+            font-size: 16px;
+            display: inline-block;
             transition: background-color 0.3s, transform 0.3s;
         }
 
@@ -152,10 +153,18 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <h1>Tema Squash Akademi</h1>
+
+        <!-- Header içindeki Giriş Yap ve Kayıt Ol Butonları -->
+        <div class="auth-buttons">
+            <a href="login.html">Giriş Yap</a>
+            <a href="register.html">Kayıt Ol</a>
+        </div>
     </header>
 
+    <!-- Menü -->
     <nav>
         <a href="#sporcular">Sporcular</a>
         <a href="#lig">Lig Sıralaması</a>
@@ -163,12 +172,7 @@
         <a href="#mac">Maç Teklifleri</a>
     </nav>
 
-    <!-- Sağdaki giriş ve kayıt butonları -->
-    <div class="auth-buttons">
-        <a href="login.html">Giriş Yap</a>
-        <a href="register.html">Kayıt Ol</a>
-    </div>
-
+    <!-- İçerik -->
     <div class="main-container">
         <img src="squash-left.jpeg" alt="Squash Görseli" class="side-image left-image">
         
@@ -197,6 +201,7 @@
         <img src="squash-right.jpeg" alt="Squash Görseli" class="side-image right-image">
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Tema Squash Akademi - Tüm Hakları Saklıdır.</p>
     </footer>
