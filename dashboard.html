@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Profili</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0; }
+        .container { width: 350px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        button { width: 100%; padding: 10px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: darkred; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hoş Geldin, <span id="userName"></span>!</h2>
+        <p><strong>Doğum Tarihi:</strong> <span id="userDob"></span></p>
+        <p><strong>Squash Seviyesi:</strong> <span id="userSquashLevel"></span></p>
+        <p><strong>Telefon:</strong> <span id="userPhone"></span></p>
+        <p><strong>E-posta:</strong> <span id="userEmail"></span></p>
+        <p><strong>Raket Kullanımı:</strong> <span id="userHand"></span></p>
+        <button onclick="logout()">Çıkış Yap</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = JSON.parse(localStorage.getItem(localStorage.getItem("currentUser")));
+
+            if (!user) {
+                alert("Giriş yapmalısınız!");
+                window.location.href = "index.html";
+                return;
+            }
+
+            document.getElementById("userName").textContent = user.name;
+            document.getElementById("userDob").textContent = user.dob;
+            document.getElementById("userSquashLevel").textContent = user.squashLevel;
+            document.getElementById("userPhone").textContent = user.phone;
+            document.getElementById("userEmail").textContent = user.email;
+            document.getElementById("userHand").textContent = user.hand;
+        });
+
+        function logout() {
+            localStorage.removeItem("currentUser");
+            alert("Çıkış yapıldı!");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
