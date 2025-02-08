@@ -125,6 +125,12 @@
         footer p {
             margin: 0;
         }
+
+        .error-message {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +150,7 @@
     <!-- Giriş Formu -->
     <div class="form-container">
         <h2>Giriş Yap</h2>
-        <form action="index.html" method="POST">
+        <form id="loginForm">
             <label for="email">E-posta Adresiniz:</label>
             <input type="email" id="email" name="email" required>
 
@@ -152,6 +158,8 @@
             <input type="password" id="sifre" name="sifre" required>
 
             <button type="submit">Giriş Yap</button>
+
+            <div id="error-message" class="error-message" style="display:none;">Mail adresi veya şifre hatalı.</div>
         </form>
     </div>
 
@@ -160,5 +168,27 @@
         <p>&copy; 2025 Tema Squash Akademi - Tüm Hakları Saklıdır.</p>
     </footer>
 
+    <script>
+        // Burada kayıtlı mail ve şifreyi manuel olarak tanımladım, normalde bir veritabanı kullanılmalı
+        const registeredEmail = "user@example.com";
+        const registeredPassword = "password123";
+
+        // Giriş formunun submit olayı
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Formun otomatik olarak gönderilmesini engeller
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("sifre").value;
+
+            // Mail ve şifreyi kontrol et
+            if (email === registeredEmail && password === registeredPassword) {
+                // Başarılı giriş, ana sayfaya yönlendir
+                window.location.href = "index.html";  // Ana sayfaya yönlendir
+            } else {
+                // Hatalı giriş, hata mesajını göster
+                document.getElementById("error-message").style.display = "block";
+            }
+        });
+    </script>
 </body>
 </html>
