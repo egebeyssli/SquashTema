@@ -69,7 +69,7 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 900px;  /* Alan genişletildi */
+            max-width: 1000px;  /* Alan genişletildi */
             margin: 50px auto;
         }
 
@@ -209,7 +209,10 @@
             }
 
             // Formu başarıyla gönderdikten sonra login sayfasına yönlendir
-            window.location.href = "login.html"; 
+            setTimeout(function() {
+                window.location.href = "login.html"; 
+            }, 500); // Yavaş geçiş için küçük bir bekleme ekledik
+
             return false; // Sayfanın yeniden yüklenmesini engelle
         }
     </script>
