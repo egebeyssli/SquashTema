@@ -3,47 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Squash Web - Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Squash Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background: #fff;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Squash Web</h1>
-        <nav>
-            <ul>
-                <li><a href="#sporcular">Sporcular</a></li>
-                <li><a href="#lig-siralama">Lig Sıralaması</a></li>
-                <li><a href="#duyurular">Duyurular</a></li>
-                <li><a href="#mac-teklifleri">Maç Teklifleri</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <section id="sporcular">
-        <h2>Sporcular</h2>
-        <p>Burada sporcuların bilgileri olacak.</p>
-    </section>
-
-    <section id="lig-siralama">
-        <h2>Lig Sıralaması</h2>
-        <p>Burada lig sıralamaları olacak.</p>
-    </section>
-
-    <section id="duyurular">
-        <h2>Duyurular</h2>
-        <p>Burada en son duyurular yer alacak.</p>
-    </section>
-
-    <section id="mac-teklifleri">
-        <h2>Maç Teklifleri</h2>
-        <p>Burada maç teklifleri yer alacak.</p>
-    </section>
-
+    <nav>
+        <a href="#sporcular">Sporcular</a>
+        <a href="#lig">Lig Sıralaması</a>
+        <a href="#duyurular">Duyurular</a>
+        <a href="#mac">Maç Teklifleri</a>
+    </nav>
+    <div class="container">
+        <section id="sporcular" class="section">
+            <h2>Sporcular</h2>
+            <p>Burada sporcuların bilgileri ve profilleri yer alacak.</p>
+        </section>
+        <section id="lig" class="section">
+            <h2>Lig Sıralaması</h2>
+            <p>Güncel lig sıralamaları burada görüntülenecek.</p>
+        </section>
+        <section id="duyurular" class="section">
+            <h2>Duyurular</h2>
+            <p>En son duyurular ve haberler burada yer alacak.</p>
+        </section>
+        <section id="mac" class="section">
+            <h2>Maç Teklifleri</h2>
+            <p>Oyuncuların maç teklifleri burada görüntülenecek.</p>
+        </section>
+    </div>
     <footer>
-        <p>&copy; 2025 Squash Web</p>
+        <p>&copy; 2025 Squash Web - Tüm Hakları Saklıdır.</p>
     </footer>
-<script src="script.js"></script>
 </body>
 </html>
