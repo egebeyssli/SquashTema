@@ -30,7 +30,7 @@
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 42px;  /* Font büyütüldü */
             letter-spacing: 2px;
         }
 
@@ -51,7 +51,7 @@
             border-radius: 5px;
             margin: 0 10px;
             transition: background-color 0.3s, transform 0.3s;
-            font-size: 16px;
+            font-size: 18px;  /* Font büyütüldü */
         }
 
         nav a:hover {
@@ -65,40 +65,42 @@
             flex-direction: column;
             align-items: center;
             margin-top: 50px;
-            padding: 20px;
+            padding: 30px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            max-width: 900px;  /* Alan genişletildi */
             margin: 50px auto;
         }
 
         .form-container h2 {
-            font-size: 28px;
+            font-size: 32px;  /* Font büyütüldü */
             margin-bottom: 20px;
+            text-align: center;
         }
 
         label {
-            font-size: 16px;
+            font-size: 18px;  /* Font büyütüldü */
             margin: 10px 0 5px;
             display: block;
         }
 
-        input[type="text"], input[type="email"], input[type="date"], select {
+        input[type="text"], input[type="email"], input[type="date"], select, input[type="password"] {
             width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            margin: 5px 0 20px;
+            padding: 15px;  /* Daha geniş alan */
+            font-size: 18px;  /* Font büyütüldü */
+            margin: 10px 0 20px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            box-sizing: border-box; /* İçerik ve padding hesaba katılsın */
         }
 
         button {
             background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;  /* Buton genişletildi */
             border-radius: 25px;
-            font-size: 18px;
+            font-size: 20px;  /* Font büyütüldü */
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -152,9 +154,10 @@
 
             <label for="seviye">Squash Seviyeniz:</label>
             <select id="seviye" name="seviye" required>
-                <option value="başlangıç">Başlangıç</option>
-                <option value="orta">Orta</option>
-                <option value="ileri">İleri</option>
+                <option value="başlangıç">Başlangıç Seviyesi</option>
+                <option value="orta">Orta Seviye</option>
+                <option value="ileri">İleri Seviye</option>
+                <option value="profesyonel">Profesyonel Seviye</option>
             </select>
 
             <label for="telefon">Telefon Numaranız:</label>
@@ -168,6 +171,13 @@
                 <option value="sağ">Sağ</option>
                 <option value="sol">Sol</option>
             </select>
+
+            <!-- Şifre Alanı ve Şifre Doğrulama -->
+            <label for="sifre">Şifre:</label>
+            <input type="password" id="sifre" name="sifre" required>
+
+            <label for="sifre2">Şifreyi Tekrar Girin:</label>
+            <input type="password" id="sifre2" name="sifre2" required>
 
             <button type="submit">Kayıt Ol</button>
         </form>
