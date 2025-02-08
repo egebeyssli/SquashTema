@@ -149,7 +149,7 @@
     <!-- Form Alanı -->
     <div class="form-container">
         <h2>Kayıt Ol</h2>
-        <form action="login.html" method="POST" onsubmit="return validateForm()">
+        <form id="registerForm" onsubmit="return validateForm()">
             <label for="ad">Adınız:</label>
             <input type="text" id="ad" name="ad" required>
 
@@ -207,8 +207,10 @@
                 errorMessage.textContent = "Şifreler uyuşmuyor, lütfen kontrol edin.";
                 return false;
             }
-            errorMessage.textContent = "";
-            return true;
+
+            // Formu başarıyla gönderdikten sonra login sayfasına yönlendir
+            window.location.href = "login.html"; 
+            return false; // Sayfanın yeniden yüklenmesini engelle
         }
     </script>
 
