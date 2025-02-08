@@ -150,7 +150,7 @@
     <!-- Giriş Formu -->
     <div class="form-container">
         <h2>Giriş Yap</h2>
-        <form id="loginForm">
+        <form id="loginForm" onsubmit="return validateForm()">
             <label for="email">E-posta Adresiniz:</label>
             <input type="email" id="email" name="email" required>
 
@@ -173,10 +173,9 @@
         const registeredEmail = "user@example.com";
         const registeredPassword = "password123";
 
-        // Giriş formunun submit olayı
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();  // Formun otomatik olarak gönderilmesini engeller
-
+        // Giriş formunu doğrulamak için kullanılan fonksiyon
+        function validateForm() {
+            // Formdan alınan değerler
             const email = document.getElementById("email").value;
             const password = document.getElementById("sifre").value;
 
@@ -184,11 +183,13 @@
             if (email === registeredEmail && password === registeredPassword) {
                 // Başarılı giriş, ana sayfaya yönlendir
                 window.location.href = "index.html";  // Ana sayfaya yönlendir
+                return false;  // Sayfa yeniden yüklenmesin
             } else {
                 // Hatalı giriş, hata mesajını göster
                 document.getElementById("error-message").style.display = "block";
+                return false;  // Sayfa yeniden yüklenmesin
             }
-        });
+        }
     </script>
 </body>
 </html>
