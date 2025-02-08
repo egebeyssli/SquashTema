@@ -149,7 +149,7 @@
     <!-- Form Alanı -->
     <div class="form-container">
         <h2>Kayıt Ol</h2>
-        <form id="registerForm" onsubmit="return validateForm()">
+        <form id="registerForm" onsubmit="return saveUserData()">
             <label for="ad">Adınız:</label>
             <input type="text" id="ad" name="ad" required>
 
@@ -198,17 +198,21 @@
     </footer>
 
     <script>
-        function validateForm() {
+        function saveUserData() {
+            const ad = document.getElementById("ad").value;
+            const soyad = document.getElementById("soyad").value;
+            const dogum = document.getElementById("dogum").value;
+            const seviye = document.getElementById("seviye").value;
+            const telefon = document.getElementById("telefon").value;
+            const email = document.getElementById("email").value;
+            const eli = document.getElementById("eli").value;
             const sifre = document.getElementById("sifre").value;
-            const sifre2 = document.getElementById("sifre2").value;
-            const errorMessage = document.getElementById("error-message");
 
-            if (sifre !== sifre2) {
-                errorMessage.textContent = "Şifreler uyuşmuyor, lütfen kontrol edin.";
-                return false;
-            }
+            // Kullanıcı bilgilerini localStorage'a kaydediyoruz
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", sifre);
 
-            // Formu başarıyla gönderdikten sonra login sayfasına yönlendir
+            // Kayıt olduktan sonra giriş sayfasına yönlendir
             setTimeout(function() {
                 window.location.href = "login.html"; 
             }, 500); // Yavaş geçiş için küçük bir bekleme ekledik
