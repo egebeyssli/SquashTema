@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squash Web</title>
+    <title>Tema Squash Akademi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,18 +11,23 @@
             padding: 0;
             background-color: #ffffff;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             background-color: #007bff;
             color: white;
             padding: 15px;
             text-align: center;
+            width: 100%;
         }
         nav {
             display: flex;
             justify-content: center;
             background-color: #0056b3;
             padding: 10px;
+            width: 100%;
         }
         nav a {
             color: white;
@@ -35,13 +40,34 @@
         nav a:hover {
             background-color: #003f7f;
         }
-        .container {
+        .main-container {
+            display: flex;
+            justify-content: space-between;
             max-width: 1200px;
-            margin: auto;
+            width: 100%;
+            margin: 20px auto;
             padding: 20px;
             background: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            position: relative;
+        }
+        .side-image {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .left-image {
+            left: -170px;
+        }
+        .right-image {
+            right: -170px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
         }
         .section {
             margin-bottom: 20px;
@@ -56,6 +82,7 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
+            width: 100%;
         }
     </style>
 </head>
@@ -69,23 +96,27 @@
         <a href="#duyurular">Duyurular</a>
         <a href="#mac">Maç Teklifleri</a>
     </nav>
-    <div class="container">
-        <section id="sporcular" class="section">
-            <h2>Sporcular</h2>
-            <p>Burada sporcuların bilgileri ve profilleri yer alacak.</p>
-        </section>
-        <section id="lig" class="section">
-            <h2>Lig Sıralaması</h2>
-            <p>Güncel lig sıralamaları burada görüntülenecek.</p>
-        </section>
-        <section id="duyurular" class="section">
-            <h2>Duyurular</h2>
-            <p>En son duyurular ve haberler burada yer alacak.</p>
-        </section>
-        <section id="mac" class="section">
-            <h2>Maç Teklifleri</h2>
-            <p>Oyuncuların maç teklifleri burada görüntülenecek.</p>
-        </section>
+    <div class="main-container">
+        <img src="squash-left.jpg" alt="Squash Görseli" class="side-image left-image">
+        <div class="content">
+            <section id="sporcular" class="section">
+                <h2>Sporcular</h2>
+                <p>Burada sporcuların bilgileri ve profilleri yer alacak.</p>
+            </section>
+            <section id="lig" class="section">
+                <h2>Lig Sıralaması</h2>
+                <p>Güncel lig sıralamaları burada görüntülenecek.</p>
+            </section>
+            <section id="duyurular" class="section">
+                <h2>Duyurular</h2>
+                <p>En son duyurular ve haberler burada yer alacak.</p>
+            </section>
+            <section id="mac" class="section">
+                <h2>Maç Teklifleri</h2>
+                <p>Oyuncuların maç teklifleri burada görüntülenecek.</p>
+            </section>
+        </div>
+        <img src="squash-right.jpg" alt="Squash Görseli" class="side-image right-image">
     </div>
     <footer>
         <p>&copy; 2025 Tema Squash Akademi - Tüm Hakları Saklıdır.</p>
