@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Tema Squash Akademi</title>
+    <style>
+        /* Genel Stil */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #007bff;  /* Canlı mavi */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;  /* Font büyütüldü */
+            letter-spacing: 2px;
+        }
+
+        /* Menü */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;  /* Mavi */
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 18px;  /* Font büyütüldü */
+        }
+
+        nav a:hover {
+            background-color: #003f7f;  /* Koyu mavi */
+            transform: scale(1.05);
+        }
+
+        /* Form Alanı */
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 900px;  /* Alan genişletildi */
+            margin: 50px auto;
+        }
+
+        .form-container h2 {
+            font-size: 32px;  /* Font büyütüldü */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 18px;  /* Font büyütüldü */
+            margin: 10px 0 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 15px;  /* Daha geniş alan */
+            font-size: 18px;  /* Font büyütüldü */
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box; /* İçerik ve padding hesaba katılsın */
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;  /* Buton genişletildi */
+            border-radius: 25px;
+            font-size: 20px;  /* Font büyütüldü */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Tema Squash Akademi</h1>
+    </header>
+
+    <!-- Menü -->
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="login.html">Giriş Yap</a>
+        <a href="register.html">Kayıt Ol</a>
+    </nav>
+
+    <!-- Giriş Formu -->
+    <div class="form-container">
+        <h2>Giriş Yap</h2>
+        <form action="index.html" method="POST">
+            <label for="email">E-posta Adresiniz:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sifre">Şifreniz:</label>
+            <input type="password" id="sifre" name="sifre" required>
+
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tema Squash Akademi - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
