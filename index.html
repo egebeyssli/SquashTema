@@ -1,89 +1,104 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema Squash Akademi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            width: 100%;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #0056b3;
-            padding: 10px;
-            width: 100%;
-        }
-        nav a {
-            color: white;
-            padding: 15px 20px;
-            text-decoration: none;
-            display: block;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        nav a:hover {
-            background-color: #003f7f;
-        }
-        .main-container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1200px;
-            width: 100%;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            position: relative;
-        }
-        .side-image {
-            width: 150px;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .left-image {
-            left: -170px;
-        }
-        .right-image {
-            right: -170px;
-        }
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            width: 100%;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header {
+        background-color: #007bff;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #0056b3;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    nav a {
+        color: white;
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    
+    nav a:hover {
+        background-color: #003f7f;
+    }
+    
+    /* Sağdaki Kayıt Ol ve Giriş Yap menülerinin stilleri */
+    nav a:last-child,
+    nav a:nth-last-child(2) {
+        color: #fff; /* Beyaz renk */
+        background-color: transparent; /* Arka plan şeffaf */
+        margin-left: auto; /* Sağ tarafa hizala */
+    }
+    
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        position: relative;
+    }
+    
+    .side-image {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .left-image {
+        left: -170px;
+    }
+    
+    .right-image {
+        right: -170px;
+    }
+    
+    .content {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .section {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+    
+    footer {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }    
     </style>
 </head>
 <body>
@@ -95,8 +110,8 @@
         <a href="#lig">Lig Sıralaması</a>
         <a href="#duyurular">Duyurular</a>
         <a href="#mac">Maç Teklifleri</a>  
-        <a href="login.html">Giriş Yap</a></li>
-        <a href="register.html">Kayıt Ol</a></li>
+        <a href="login.html">Giriş Yap</a>
+        <a href="register.html">Kayıt Ol</a>
     <div class="main-container">
         <img src="squash-left.jpeg" alt="Squash Görseli" class="side-image left-image">
         <div class="content">
