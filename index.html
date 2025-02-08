@@ -84,6 +84,61 @@
             margin-top: 20px;
             width: 100%;
         }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Menü öğelerini aralarındaki boşlukla dağıt */
+    text-align: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Giriş ve Kayıt bağlantılarının sağa hizalanması ve beyaz renk verilmesi */
+nav ul li:last-child, /* Son iki öğeyi seçiyoruz (Kayıt Ol ve Giriş Yap) */
+nav ul li:nth-last-child(2) {
+    margin-left: auto;  /* Sağ tarafa kaydırmak için */
+}
+
+nav ul li:last-child a, nav ul li:nth-last-child(2) a {
+    color: #fff;  /* Beyaz renk */
+    background-color: transparent;  /* Arka plan rengini şeffaf yap */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
     </style>
 </head>
 <body>
@@ -94,43 +149,9 @@
         <a href="#sporcular">Sporcular</a>
         <a href="#lig">Lig Sıralaması</a>
         <a href="#duyurular">Duyurular</a>
-        <a href="#mac">Maç Teklifleri</a>
-    </nav>
-    <div class="main-container">
-        <div class="content">
-            <section id="kayit-giris" class="section">
-                <h2>Kayıt Ol / Giriş Yap</h2>
-    
-                <div class="container">
-                    <h3>Kayıt Ol</h3>
-                    <input type="text" id="registerName" placeholder="İsim Soyisim" required>
-                    <input type="date" id="registerDob" required>
-                    <select id="registerSquashLevel">
-                        <option value="Başlangıç">Başlangıç</option>
-                        <option value="Orta Seviye">Orta Seviye</option>
-                        <option value="İleri Seviye">İleri Seviye</option>
-                        <option value="Profesyonel">Profesyonel</option>
-                    </select>
-                    <input type="tel" id="registerPhone" placeholder="Telefon Numarası" required>
-                    <input type="email" id="registerEmail" placeholder="E-posta Adresi" required>
-                    <select id="registerHand">
-                        <option value="Sağ El">Sağ El</option>
-                        <option value="Sol El">Sol El</option>
-                    </select>
-                    <input type="password" id="registerPass" placeholder="Şifre" required>
-                    <button onclick="register()">Kayıt Ol</button>
-                </div>
-    
-                <div class="container">
-                    <h3>Giriş Yap</h3>
-                    <input type="email" id="loginEmail" placeholder="E-posta Adresi" required>
-                    <input type="password" id="loginPass" placeholder="Şifre" required>
-                    <button onclick="login()">Giriş Yap</button>
-                </div>
-            </section>
-        </div>
-    </div>
-    <script src="script.js"></script>    
+        <a href="#mac">Maç Teklifleri</a>  
+        <a href="login.html">Giriş Yap</a></li>
+        <a href="register.html">Kayıt Ol</a></li>
     <div class="main-container">
         <img src="squash-left.jpeg" alt="Squash Görseli" class="side-image left-image">
         <div class="content">
