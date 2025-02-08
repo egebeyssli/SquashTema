@@ -123,6 +123,13 @@
         footer p {
             margin: 0;
         }
+
+        /* Hata Mesajı */
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+        }
     </style>
 </head>
 <body>
@@ -142,7 +149,7 @@
     <!-- Form Alanı -->
     <div class="form-container">
         <h2>Kayıt Ol</h2>
-        <form action="login.html" method="POST">
+        <form action="login.html" method="POST" onsubmit="return validateForm()">
             <label for="ad">Adınız:</label>
             <input type="text" id="ad" name="ad" required>
 
@@ -179,6 +186,8 @@
             <label for="sifre2">Şifreyi Tekrar Girin:</label>
             <input type="password" id="sifre2" name="sifre2" required>
 
+            <div id="error-message" class="error"></div>
+
             <button type="submit">Kayıt Ol</button>
         </form>
     </div>
@@ -187,6 +196,21 @@
     <footer>
         <p>&copy; 2025 Tema Squash Akademi - Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <script>
+        function validateForm() {
+            const sifre = document.getElementById("sifre").value;
+            const sifre2 = document.getElementById("sifre2").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (sifre !== sifre2) {
+                errorMessage.textContent = "Şifreler uyuşmuyor, lütfen kontrol edin.";
+                return false;
+            }
+            errorMessage.textContent = "";
+            return true;
+        }
+    </script>
 
 </body>
 </html>
