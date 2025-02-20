@@ -4,207 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tema Squash Akademi</title>
-    <style>
-        /* Genel Stil */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7fc;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
-
-        /* Header */
-        header {
-            background-color: #007bff;  /* Canlı mavi */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            letter-spacing: 2px;
-        }
-
-        /* Menü */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #0056b3;  /* Mavi */
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a {
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-            border-radius: 5px;
-            margin: 0 10px;
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 16px;
-        }
-
-        nav a:hover {
-            background-color: #003f7f;  /* Koyu mavi */
-            transform: scale(1.05);
-        }
-
-        /* Header'deki Butonlar */
-        .auth-buttons {
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            gap: 15px;
-        }
-
-        .auth-buttons a {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 16px;
-            display: inline-block;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .auth-buttons a:hover {
-            background-color: #218838;
-            transform: scale(1.05);
-        }
-
-        /* İçerik Alanı */
-        .main-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            min-height: 400px;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .section {
-            background: #f8f9fa;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Görseller */
-        .side-image {
-            width: 150px;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .left-image {
-            left: -170px;
-        }
-
-        .right-image {
-            right: -170px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <h1>Tema Squash Akademi</h1>
-
-        <!-- Header içindeki Giriş Yap ve Kayıt Ol Butonları -->
         <div class="auth-buttons">
             <a href="login.html">Giriş Yap</a>
             <a href="register.html">Kayıt Ol</a>
         </div>
     </header>
-
-    <!-- Menü -->
     <nav>
-        <a href="#sporcular">Sporcular</a>
+        <a href="sporcular.html">Sporcular</a>
         <a href="#lig">Lig Sıralaması</a>
         <a href="#duyurular">Duyurular</a>
         <a href="#mac">Maç Teklifleri</a>
     </nav>
-
-    <!-- İçerik -->
     <div class="main-container">
         <img src="squash-left.jpeg" alt="Squash Görseli" class="side-image left-image">
-        
         <div class="content">
-            <section id="sporcular" class="section">
-                <h2>Sporcular</h2>
-                <p>Burada sporcuların bilgileri ve profilleri yer alacak.</p>
+            <section id="psa-videos">
+                <h2>PSA Squash Maç Videoları</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/watch?v=ahVlCNuOgnM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/watch?v=zPFRpMClhf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </section>
-
-            <section id="lig" class="section">
-                <h2>Lig Sıralaması</h2>
-                <p>Güncel lig sıralamaları burada görüntülenecek.</p>
-            </section>
-
-            <section id="duyurular" class="section">
+            <section id="duyurular">
                 <h2>Duyurular</h2>
                 <p>En son duyurular ve haberler burada yer alacak.</p>
             </section>
-
-            <section id="mac" class="section">
-                <h2>Maç Teklifleri</h2>
-                <p>Oyuncuların maç teklifleri burada görüntülenecek.</p>
+            <section id="oyuncu-bilgi">
+                <h2>Tema Squash Oyuncularına Özel</h2>
+                <p>Bu sayfa, Tema Squash oyuncularına özeldir. Aktif sporcular listeleri, lig sıralamaları, gelecek turnuvalar ve maç tekliflerini bu alanda yapabilirsiniz.</p>
+                <p>Squash kuralları hakkında daha fazla bilgi almak isterseniz, aşağıdaki bölüme göz atabilirsiniz.</p>
+                <a href="#squash-kurallari">Squash Kuralları</a>
+            </section>
+            <section id="squash-kurallari">
+                <h2>Squash Kuralları</h2>
+                <p>Squash, iki oyuncu arasında (tekler) veya dört oyuncu arasında (dörtlü) oynanabilen hızlı ve heyecan verici bir spor dalıdır. Oyuncular, raketle topu duvarlara vurarak oyunu sürdürürler. Oyunun amacı, rakibinizin topu doğru şekilde karşılamasını engellemektir. İşte squash oyunundaki temel kurallar:</p>
+                
+                <h3>1. Oyunun Temel Kuralları</h3>
+                <p>Squash oyunu, iki oyuncu arasında karşılıklı olarak oynanır ve her oyuncu, rakibinin topa doğru bir şekilde karşılık vermesini engellemeye çalışır. Oyuncuların sırasıyla, topu duvara vurması gerekir. Top duvara vurduktan sonra, rakibin bu topu geri göndermesi gerekir. Oyuncular arasında her vuruş bir "rally" (ralli) oluşturur. Rally, bir oyuncunun topu dışarıya atması veya kurallara uymayan bir şekilde vuruş yapmasıyla sona erer.</p>
+                
+                <h3>2. Oyun Sahası</h3>
+                <p>Squash, dikdörtgen şeklinde bir alanda oynanır. Sahada, ön duvar, arka duvar ve yan duvarlar yer alır. Ön duvarın ortasında bir servis kutusu bulunur. Oyuncular topu bu ön duvara doğru vurur ve topun geri gelmesini beklerler. Top, herhangi bir yan duvara çarpabilir, ancak her vuruşun duvarda belirtilen yüksekliğe ulaşması gerekir.</p>
+            
+                <h3>3. Puanlama Sistemi</h3>
+                <p>Squash, genellikle iki farklı puanlama sistemiyle oynanır: geleneksel "set" puanlama ve "rally" puanlama. Rally puanlama, her rally'de bir puan kazandırır, yani her hata yapan oyuncu bir puan kaybeder. Set puanlama sisteminde, oyuncular 11 veya 15 puan alana kadar oyun sürer. Genellikle 3 oyun kazanan oyuncu, maçı kazanmış olur.</p>
+                
+                <h3>4. Servis Kuralları</h3>
+                <p>Her oyun başında ve her sette, oyun servis ile başlar. Oyuncu servisi belirli bir alandan yapmalıdır. Servis sırası, ilk oyunun sonunda değişir ve sonraki oyunlarda da her sette bir oyuncuya servis hakkı verilir. Servis yapan oyuncu, topu ön duvara doğru vurur ve topun servis kutusunun içine düşmesini sağlar. Eğer servis geçerli olursa, rally başlar. Eğer servis hatalıysa, rakip oyuncu puan kazanır.</p>
+            
+                <h3>5. Raket Kullanımı</h3>
+                <p>Oyuncular, raketle topa vuruş yaparak oyunlarını sürdürürler. Raket, topa doğrudan vurulmalı ve rakibin oyununu engellemeyecek şekilde kullanılmalıdır. Raketin aşırı şekilde savrulması veya rakibe zarar vermesi yasaktır. Herhangi bir aşırı hareket, oyuncuya uyarı veya hata verilmesine yol açabilir.</p>
+            
+                <h3>6. Topun Çıkması ve Rally’nin Sona Ermesi</h3>
+                <p>Top, oyun sahası dışında bir yere düşerse (örneğin, yan duvarların dışına çıkarsa veya tavana çarparsa), rally sona erer ve rakip oyuncu puan kazanır. Rally, aynı zamanda topun kurallara aykırı bir şekilde vurulması sonucu da sona erer. Örneğin, topun herhangi bir duvara çarpmadan doğrudan dışarı çıkması durumunda rally sona erer.</p>
+            
+                <h3>7. Squash'ta Faul ve Uyarılar</h3>
+                <p>Faul, oyuncunun kurallara uymadan oyun oynaması anlamına gelir. Bu, topun yanlış duvara vurulması, rakibe fiziksel engel olunması, servis hatası veya raket kullanımındaki aşırılıklar gibi çeşitli durumlarda olabilir. Faul yapan oyuncuya, rakip oyuncuya avantaj sağlaması için puan verilir. Tekrar edilen hatalar, oyuncuya uyarı verilmesine neden olabilir ve belirli bir sayıda faul sonrası oyuncu maçtan diskalifiye edilebilir.</p>
+            
+                <h3>8. Oyun Sonu</h3>
+                <p>Bir maç sonunda, kazanan oyuncu genellikle 3 ya da 5 setten oluşan oyun formatında belirlenir. Oyuncu, belirli bir sayıya ulaşan ilk oyuncu olur. Maçın sonunda kazanan oyuncu, her iki oyuncuya da sporcu bir şekilde el sıkışarak teşekkür eder. Bu, sportif bir davranışın gösterilmesidir.</p>
+            
+                <h3>9. Squash’ta Adalet ve Fair Play</h3>
+                <p>Squash, adil oyun ve saygılı davranışları teşvik eden bir spordur. Oyuncular, rakiplerine karşı saygılı davranmalı ve her zaman sportmenlik kurallarına uymalıdır. Hakemler maç sırasında kuralları uygular ve herhangi bir anlaşmazlık durumunda karar verirler. Oyuncular, rakiplerine ve hakemlere karşı olumsuz davranışlardan kaçınmalıdır.</p>
+            
+                <p>Squash, hem fiziksel hem de zihinsel becerilerin önemli olduğu bir spordur. Hem teknik hem de strateji açısından güçlü bir oyun gerektirir. Hem eğlenceli hem de rekabetçi olabilen bu sporu, oyun kurallarına uygun şekilde oynadığınızda en iyi şekilde deneyimleyebilirsiniz.</p>
             </section>
         </div>
-
         <img src="squash-right.jpeg" alt="Squash Görseli" class="side-image right-image">
     </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Tema Squash Akademi - Tüm Hakları Saklıdır.</p>
     </footer>
-
+    <script src="script.js"></script>
+    <a href="sporcular.html">Sporcular</a>
 </body>
 </html>
